@@ -1,5 +1,5 @@
 import { updateProfile } from 'firebase/auth';
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router';
 import { Authcontext } from '../../context/Authcontext';
@@ -10,6 +10,9 @@ const UpdateProfile = () => {
   const [photoURL, setPhotoURL] = useState(user?.photoURL || "");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  useEffect(()=>{
+         document.title = " Update Profile | KrishiLink";
+  },[])
 
   const handleUpdate = async (e) => {
     e.preventDefault();

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from '../../Component/Nav';
 import HeroSection from '../../Component/HeroSection';
 
@@ -12,10 +12,18 @@ import LoadingScreen from '../Loading/LoadingScreen';
 
 
 const Home = () => {
+   useEffect(()=>{
+      document.title = " Home | KrishiLink";
+    },[])
 
   const data=useLatestCrops()
   const crops=data.products
+  const loading= data.loading
   console.log(crops);
+   if (loading) {
+    return <LoadingScreen />;
+  }
+
  
   
     return (

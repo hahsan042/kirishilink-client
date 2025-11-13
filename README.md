@@ -1,16 +1,44 @@
-# React + Vite
+# 🌾 KrishiLink
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Site URL: https://6915e8be4df13a17a9227dd4--superlative-biscuit-1df894.netlify.app
+server side: https://github.com/hahsan042/kirishi-link-server-side
+client side:https://github.com/hahsan042/kirishilink-client
+# About the Project
 
-Currently, two official plugins are available:
+KrishiLink is a modern agricultural platform that connects farmers and buyers directly.
+Farmers can post their crops, and buyers can express interest and purchase fresh produce easily.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Features
 
-## React Compiler
+🌱 Crop Marketplace: Farmers can add crop listings with details like name, type, price, and quantity.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+💬 Buyer Interest System: Buyers can show interest and communicate directly with farmers.
 
-## Expanding the ESLint configuration
+📰 Agro News Section: Latest agricultural news and updates with CRUD (create, update, delete) functionality.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+👩‍🌾 Featured Farmers: Highlights top farmers and their best products.
+
+🔒 Secure Authentication: Firebase Authentication (Email & Google Sign-in).
+
+📱 Responsive Design: Fully optimized for mobile, tablet, and desktop.
+
+# Technologies Used
+
+Frontend: React.js, Vite, Tailwind CSS, DaisyUI, Framer Motion
+
+Backend: Node.js, Express.js, MongoDB
+
+Authentication: Firebase
+
+Hosting: Vercel (Client) & Vercel/Render (Server)
+
+# Screenshots
+
+(You can add screenshots later — for example)
+![home page](image.png)
+![my post](image-1.png)
+
+👨‍💻 Developer
+
+Md. Ahsan Habib
+📧 Email: [eee1916054brur@gmail.com]

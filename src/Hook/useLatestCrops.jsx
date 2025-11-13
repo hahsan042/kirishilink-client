@@ -8,10 +8,9 @@ const useLatestCrops=()=>{
      const [loading , setLoading]=useState(true);
       const [error , setError]=useState(null);
       
-
-      
+//
       useEffect(()=>{
-        Axios.get('http://localhost:3000/latest-crops')
+        Axios.get('https://kirishi-link.vercel.app/latest-crops')
        .then(data => setProducts(data.data))
             .catch(err=>setError(err))
             .finally(()=>setLoading(false))

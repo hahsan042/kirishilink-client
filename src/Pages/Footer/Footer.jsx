@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -32,9 +33,7 @@ const Footer = () => {
             <li>
               <Link to="/myinterests" className="hover:text-gray-300 transition">My Interests</Link>
             </li>
-            <li>
-              <Link to="/profile" className="hover:text-gray-300 transition">Profile</Link>
-            </li>
+             <li><Link to="/managenews" className="hover:text-gray-300 transition">Manage News</Link></li>
           </ul>
         </div>
 
@@ -42,16 +41,17 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-gray-300 transition">
+            <a href="https://www.facebook.com/hahsan042" className="hover:text-gray-300 transition">
               <FaFacebookF size={20} />
             </a>
-            <a href="#" className="hover:text-gray-300 transition">
-              <FaTwitter size={20} />
+            <a href="https://www.facebook.com/hahsan042" className="hover:text-gray-300 transition">
+          
+              <FaXTwitter  size={20}/>
             </a>
-            <a href="#" className="hover:text-gray-300 transition">
+            <a href="https://www.instagram.com/" className="hover:text-gray-300 transition">
               <FaInstagram size={20} />
             </a>
-            <a href="#" className="hover:text-gray-300 transition">
+            <a href="https://www.facebook.com/hahsan042" className="hover:text-gray-300 transition">
               <FaLinkedinIn size={20} />
             </a>
           </div>

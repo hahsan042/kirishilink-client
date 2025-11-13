@@ -6,19 +6,19 @@ const FeaturedFarmers = () => {
     {
       name: "Rahim Uddin",
       location: "Rajshahi, Bangladesh",
-      image: "https://source.unsplash.com/400x400/?farmer,portrait",
+      image: "https://www.nunhems.com/api/imaging/focalarea/16x9/889x/dam/jcr%3Add51c2ce-af10-32c5-9886-2f635751330e/Tomato%20Top%20Banner-1280x1280.jpeg",
       crops: "Tomato, Potato, Mango",
     },
     {
       name: "Fatema Begum",
       location: "Cumilla, Bangladesh",
-      image: "https://source.unsplash.com/400x400/?woman,farmer",
+      image: "https://i.ytimg.com/vi/Oek8YGBlmN8/maxresdefault.jpg",
       crops: "Brinjal, Cucumber, Chili",
     },
     {
       name: "Shahidul Islam",
       location: "Sylhet, Bangladesh",
-      image: "https://source.unsplash.com/400x400/?agriculture,person",
+      image: "https://img.freepik.com/premium-photo/happy-mature-farmer-standing-green-wheat-field-holding-hands-air_685725-349.jpg",
       crops: "Paddy, Wheat, Corn",
     },
   ];

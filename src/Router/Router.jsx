@@ -12,6 +12,9 @@ import UpdateProfile from '../Pages/Profile/UpdateProfile';
 import NotFound from '../Pages/ErrorPage/NotFound';
 import PrivateRoute from './PrivateRoute';
 import ForgetPassword from '../Pages/Auth/ForgetPassword';
+import Blogs from '../Pages/blogNews/Blogs';
+import BlogDetails from '../Pages/blogNews/BlogDetails';
+import ManageNews from '../Pages/blogNews/ManageNews';
 
 
 
@@ -32,7 +35,9 @@ const router = createBrowserRouter([
       { path: 'allcrops', element: <AllCrops /> },
       { path: 'updateprofile', element:  <PrivateRoute><UpdateProfile/></PrivateRoute>},
      { path: 'ForgetPassword', element: <ForgetPassword></ForgetPassword>},
-    
+      { path: 'blogs', element: <Blogs></Blogs>},
+        { path: 'blogs/:id', element: <BlogDetails></BlogDetails>},
+          { path: 'managenews', element:<PrivateRoute> <ManageNews></ManageNews> </PrivateRoute>},
     
        
       

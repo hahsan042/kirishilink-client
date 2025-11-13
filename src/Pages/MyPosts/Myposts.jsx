@@ -17,7 +17,7 @@ const Myposts = () => {
   const fetchCrops = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:3000/crops`);
+      const res = await axios.get(`https://kirishi-link.vercel.app/crops`);
       const userCrops = res.data.filter(c => c.owner?.ownerEmail === user.email);
       setCrops(userCrops);
     } catch (err) {
@@ -29,6 +29,7 @@ const Myposts = () => {
   };
 
   useEffect(() => {
+     document.title = " My posts | KrishiLink";
     fetchCrops();
   }, [user]);
 
@@ -38,7 +39,7 @@ const Myposts = () => {
     if (!confirm) return;
 
     try {
-      await axios.delete(`http://localhost:3000/crops/${cropId}`);
+      await axios.delete(`https://kirishi-link.vercel.app/crops/${cropId}`);
       toast.success("Crop deleted successfully!");
       setCrops(crops.filter(c => c._id !== cropId));
     } catch (err) {
@@ -57,7 +58,7 @@ const Myposts = () => {
   const handleSave = async () => {
     try {
       const { _id, name, pricePerUnit, quantity, unit, location, description } = editCrop;
-      await axios.put(`http://localhost:3000/crops/${_id}`, {
+      await axios.put(`https://kirishi-link.vercel.app/crops/${_id}`, {
         name, pricePerUnit, quantity, unit, location, description
       });
       toast.success("Crop updated successfully!");

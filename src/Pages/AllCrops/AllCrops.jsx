@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useProduct from "../../Hook/useProducts";
 import { Link } from "react-router-dom";
 import LoadingScreen from "../Loading/LoadingScreen";
@@ -6,6 +6,9 @@ import LoadingScreen from "../Loading/LoadingScreen";
 const AllCrops = () => {
   const { products, loading, error } = useProduct();
   const [search, setSearch] = useState("");
+  useEffect(()=>{
+    document.title = " AllCrops | KrishiLink";
+  },[])
 
   if (loading) return <LoadingScreen></LoadingScreen>
   if (error) return <p className="text-center text-red-600 mt-10">Error loading crops</p>;

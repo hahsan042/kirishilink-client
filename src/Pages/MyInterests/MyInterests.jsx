@@ -11,12 +11,13 @@ const MyInterests = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+     document.title = " My Interests | KrishiLink";
     if (!user) return;
     const fetchInterests = async () => {
       try {
         setLoading(true);
         const res = await axios.get(
-          `http://localhost:3000/my-interests?userEmail=${user.email}`
+          `https://kirishi-link.vercel.app/my-interests?userEmail=${user.email}`
         );
         setInterests(res.data); // data should include crop info + user interest
       } catch (err) {

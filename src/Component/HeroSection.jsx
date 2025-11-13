@@ -35,7 +35,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="hero-section">
+    <div className="hero-section overflow-x-hidden">
       <Slider {...settings}>
         {slides.map((slide, index) => (
           <div key={index} className="relative">

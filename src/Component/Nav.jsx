@@ -27,11 +27,14 @@ const Nav = () => {
         <ul className="menu menu-horizontal px-1 gap-2">
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/allcrops">All Crops</NavLink></li>
+          
           {user && (
             <>
               <li><NavLink to="/addcrop">Add Crop</NavLink></li>
               <li><NavLink to="/myposts">My Posts</NavLink></li>
               <li><NavLink to="/myinterests">My Interests</NavLink></li>
+             
+              
             </>
           )}
           {!user && (
@@ -40,6 +43,7 @@ const Nav = () => {
               <li><NavLink to="/register">Register</NavLink></li>
             </>
           )}
+            <li><NavLink to="/blogs">Blog News</NavLink></li>
         </ul>
       </div>
 
@@ -118,6 +122,7 @@ const Nav = () => {
                 <li><NavLink to="/addcrop" onClick={() => setIsOpen(false)}>Add Crop</NavLink></li>
                 <li><NavLink to="/myposts" onClick={() => setIsOpen(false)}>My Posts</NavLink></li>
                 <li><NavLink to="/myinterests" onClick={() => setIsOpen(false)}>My Interests</NavLink></li>
+                
                 <li><NavLink to="/updateprofile" onClick={() => setIsOpen(false)}>Update Profile</NavLink></li>
                 <li><button onClick={handleLogout}>Logout</button></li>
               </>
@@ -128,6 +133,7 @@ const Nav = () => {
                 <li><NavLink to="/register" onClick={() => setIsOpen(false)}>Register</NavLink></li>
               </>
             )}
+            <li><NavLink to="/blogs" onClick={() => setIsOpen(false)} >Blog News</NavLink></li>
           </ul>
         )}
       </div>
