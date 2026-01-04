@@ -14,10 +14,10 @@ const Nav = () => {
   };
 
   return (
-    <div className="navbar bg-green-900 text-white font-bold shadow-sm px-4 relative">
+    <div className="navbar bg-green-900 text-white font-bold shadow-sm px-4 relative sticky top-0 z-50 ">
       {/* Logo */}
       <div className="navbar-start flex items-center gap-2">
-        <NavLink className="btn btn-ghost text-xl" to="/">
+        <NavLink className=" text-xl" to="/">
           Krishi🌱Link
         </NavLink>
       </div>
@@ -27,14 +27,12 @@ const Nav = () => {
         <ul className="menu menu-horizontal px-1 gap-2">
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/allcrops">All Crops</NavLink></li>
-          
+           
           {user && (
             <>
               <li><NavLink to="/addcrop">Add Crop</NavLink></li>
               <li><NavLink to="/myposts">My Posts</NavLink></li>
               <li><NavLink to="/myinterests">My Interests</NavLink></li>
-             
-              
             </>
           )}
           {!user && (
@@ -43,7 +41,7 @@ const Nav = () => {
               <li><NavLink to="/register">Register</NavLink></li>
             </>
           )}
-            <li><NavLink to="/blogs">Blog News</NavLink></li>
+          <li><NavLink to="/blogs">News</NavLink></li>
         </ul>
       </div>
 
@@ -53,7 +51,7 @@ const Nav = () => {
 
         {user && (
           <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost flex items-center gap-2">
+            <label tabIndex={0} className=" flex items-center gap-2">
                 <span className="font-semibold">{user.displayName || "User"}</span>
               <div className="w-10 h-10 rounded-full overflow-hidden">
                 <img
@@ -68,8 +66,11 @@ const Nav = () => {
               tabIndex={0}
               className="dropdown-content menu p-2 shadow bg-green-900 rounded-box w-40 text-white"
             >
-              <li><NavLink to="/updateprofile">Update Profile</NavLink></li>
+              {/* <li><NavLink to="/updateprofile">Update Profile</NavLink></li> */}
+              <li><NavLink to="/dashboard">Dashboard</NavLink></li>
               <li><button onClick={handleLogout}>Logout</button></li>
+              
+              
             </ul>
           </div>
         )}
@@ -97,7 +98,7 @@ const Nav = () => {
           </div>
         ) : (
           <button
-            className="btn btn-ghost text-white text-xl"
+            className=" text-white text-xl"
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg
@@ -117,23 +118,26 @@ const Nav = () => {
           <ul className="absolute right-2 top-14 w-56 bg-green-900 shadow-lg rounded-md p-4 flex flex-col gap-2 z-50">
             <li><NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink></li>
             <li><NavLink to="/allcrops" onClick={() => setIsOpen(false)}>All Crops</NavLink></li>
+            <li><NavLink to="/blogs">News</NavLink></li>
             {user && (
               <>
-                <li><NavLink to="/addcrop" onClick={() => setIsOpen(false)}>Add Crop</NavLink></li>
+                {/* <li><NavLink to="/addcrop" onClick={() => setIsOpen(false)}>Add Crop</NavLink></li>
                 <li><NavLink to="/myposts" onClick={() => setIsOpen(false)}>My Posts</NavLink></li>
                 <li><NavLink to="/myinterests" onClick={() => setIsOpen(false)}>My Interests</NavLink></li>
-                
                 <li><NavLink to="/updateprofile" onClick={() => setIsOpen(false)}>Update Profile</NavLink></li>
-                <li><button onClick={handleLogout}>Logout</button></li>
+                <li><button onClick={handleLogout}>Logout</button></li> */}
+           
+                    <li><NavLink to="/dashboard">Dashboard</NavLink></li>
               </>
             )}
             {!user && (
               <>
+              
                 <li><NavLink to="/login" onClick={() => setIsOpen(false)}>Login</NavLink></li>
                 <li><NavLink to="/register" onClick={() => setIsOpen(false)}>Register</NavLink></li>
+                
               </>
             )}
-            <li><NavLink to="/blogs" onClick={() => setIsOpen(false)} >Blog News</NavLink></li>
           </ul>
         )}
       </div>

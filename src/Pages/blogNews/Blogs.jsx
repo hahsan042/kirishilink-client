@@ -52,14 +52,14 @@ const Blogs = () => {
           </div>
 
           {/* Create Post Button */}
-        {
+        {/* {
           user&&(  <Link
             to="/managenews"
             className="mt-6 md:mt-0 inline-block px-6 py-3 bg-green-600 text-white font-semibold rounded-full shadow-md hover:bg-green-700 hover:shadow-lg transition"
           >
             + Create Post
           </Link>)
-        }
+        } */}
         </div>
 
         {/* News Grid */}

@@ -32,7 +32,7 @@ const Home = () => {
            <section className="my-10 px-6 md:px-16">
         <h2 className="text-2xl font-bold mb-6 text-center">🌾 Latest Crop Posts</h2>
         
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-4">
           {crops.map(crop => (
             <Link  to={`/cropdetails/${crop._id}`} key={crop._id} className="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-lg transition">
               <img src={crop.image} alt={crop.name} className="h-48 w-full object-cover" />

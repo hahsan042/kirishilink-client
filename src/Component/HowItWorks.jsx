@@ -42,7 +42,7 @@ const HowItWorks = () => {
   };
 
   return (
-    <section className="py-16 bg-green-50">
+    <section className="py-16 ">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ const HowItWorks = () => {
           <motion.div
             key={index}
             variants={itemVariants}
-            className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition hover:scale-105"
+            className="bg-green-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition hover:scale-105"
           >
             {step.icon}
             <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
